@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  host: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
@@ -44,11 +44,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: nimbus-web_production
-  username: nimbus-web
-  password: <%= ENV['NIMBUS-WEB_DATABASE_PASSWORD'] %>
+   url: <%= ENV['DATABASE_URL'] %>
+#
+# production:
+#   <<: *default
+#   database: nimbus-web_production
+#   username: nimbus-web
+#   password: <%= ENV['NIMBUS-WEB_DATABASE_PASSWORD'] %>
